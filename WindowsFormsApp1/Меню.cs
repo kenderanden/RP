@@ -22,5 +22,11 @@ namespace WindowsFormsApp1
             Form formClient = new Клиент();
             formClient.Show();
         }
+
+        private void buttonOpenAgents_Click(object sender, EventArgs e)
+        {
+            Form formClient = new Риелторы();
+            formClient.Show();
+        }
     }
 }
