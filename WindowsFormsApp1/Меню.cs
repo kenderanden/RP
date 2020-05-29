@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public Menu()
         {
             InitializeComponent();
+        }
+
+        private void buttonOpenClients_Click(object sender, EventArgs e)
+        {
+            Form formClient = new Клиент();
+            formClient.Show();
         }
     }
 }
