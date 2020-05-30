@@ -8,7 +8,7 @@ namespace WindowsFormsApp1
 {
     static class Program
     {
-        public static RPEntities4 RPE = new RPEntities4();
+        public static RPEntities6 RPE = new RPEntities6();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

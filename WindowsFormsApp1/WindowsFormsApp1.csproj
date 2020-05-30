@@ -58,12 +58,6 @@
     <Compile Include="ClientsSet.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Клиент.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Клиент.Designer.cs">
-      <DependentUpon>Клиент.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,6 +72,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="RealEstateSet.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Клиент.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Клиент.Designer.cs">
+      <DependentUpon>Клиент.cs</DependentUpon>
     </Compile>
     <Compile Include="Меню.cs">
       <SubType>Form</SubType>
