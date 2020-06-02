@@ -4,12 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d2687a62ca61492381afdad44b7814bc" Name="Diagram1" ZoomLevel="86">
-        <EntityTypeShape EntityType="RPModel.AgentsSet" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="RPModel.ClientsSet" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="RPModel.RealEstateSet" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="RPModel.SupplySet" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+      <Diagram DiagramId="8f93b19919fd4aecab46daaa304dee01" Name="Diagram1">
+        <EntityTypeShape EntityType="RPModel.AgentsSet" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPModel.ClientsSet" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPModel.DemandSet" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPModel.RealEstateSet" Width="1.5" PointX="5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPModel.SupplySet" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="RPModel.FK_DemandSet_AgentsSet" ManuallyRouted="false" />
         <AssociationConnector Association="RPModel.FK_SupplySet_AgentsSet" ManuallyRouted="false" />
+        <AssociationConnector Association="RPModel.FK_DemandSet_ClientsSet" ManuallyRouted="false" />
         <AssociationConnector Association="RPModel.FK_SupplySet_ClientsSet" ManuallyRouted="false" />
         <AssociationConnector Association="RPModel.FK_SupplySet_RealEstateSet" ManuallyRouted="false" />
       </Diagram>

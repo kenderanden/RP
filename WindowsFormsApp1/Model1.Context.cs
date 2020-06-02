@@ -13,10 +13,10 @@ namespace WindowsFormsApp1
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RPEntities8 : DbContext
+    public partial class RPEntities11 : DbContext
     {
-        public RPEntities8()
-            : base("name=RPEntities8")
+        public RPEntities11()
+            : base("name=RPEntities11")
         {
         }
     
@@ -27,6 +27,7 @@ namespace WindowsFormsApp1
     
         public virtual DbSet<AgentsSet> AgentsSet { get; set; }
         public virtual DbSet<ClientsSet> ClientsSet { get; set; }
+        public virtual DbSet<DemandSet> DemandSet { get; set; }
         public virtual DbSet<RealEstateSet> RealEstateSet { get; set; }
         public virtual DbSet<SupplySet> SupplySet { get; set; }
     }

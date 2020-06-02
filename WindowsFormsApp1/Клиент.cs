@@ -101,5 +101,27 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Невозможно удалить, эта запись используется.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void listViewClient_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewClient.SelectedItems.Count == 1)
+            {
+                ClientsSet clientsSet = listViewClient.SelectedItems[0].Tag as ClientsSet;
+
+                textBoxFirstName.Text = clientsSet.FirstName;
+                textBoxLastName.Text = clientsSet.LastName;
+                textBoxMiddleName.Text = clientsSet.MiddleName;
+                textBoxEmail.Text = clientsSet.Email;
+                textBoxPhone.Text = clientsSet.Phone;
+            }
+            else
+            {
+                textBoxFirstName.Text = "";
+                textBoxLastName.Text = "";
+                textBoxMiddleName.Text = "";
+                textBoxEmail.Text = "";
+                textBoxPhone.Text = "";
+            }
+        }
     }
 }

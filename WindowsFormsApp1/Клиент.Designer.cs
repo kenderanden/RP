@@ -149,6 +149,7 @@
             this.listViewClient.TabIndex = 10;
             this.listViewClient.UseCompatibleStateImageBehavior = false;
             this.listViewClient.View = System.Windows.Forms.View.Details;
+            this.listViewClient.SelectedIndexChanged += new System.EventHandler(this.listViewClient_SelectedIndexChanged);
             // 
             // columnHeader1
             // 

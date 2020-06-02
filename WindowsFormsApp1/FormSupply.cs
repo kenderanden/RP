@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
             comboBoxAgents.Items.Clear();
             foreach (AgentsSet agentsSet in Program.RPE.AgentsSet)
             {
-                string[] item = { agentsSet.id.ToString() + ".", agentsSet.FirstName, agentsSet.MiddleName, agentsSet.LastName };
+                string[] item = { agentsSet.id.ToString() + ". ", agentsSet.FirstName, agentsSet.MiddleName, agentsSet.LastName };
                 comboBoxAgents.Items.Add(string.Join("", item));
             }
         }
@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
             comboBoxClients.Items.Clear();
             foreach (ClientsSet clientsSet in Program.RPE.ClientsSet)
             {
-                string[] item = { clientsSet.id.ToString() + ".", clientsSet.FirstName, clientsSet.MiddleName, clientsSet.LastName };
+                string[] item = { clientsSet.id.ToString() + ". ", clientsSet.FirstName, clientsSet.MiddleName, clientsSet.LastName };
                 comboBoxClients.Items.Add(string.Join(" ", item));
             }
         }
@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
             comboBoxRealEstate.Items.Clear();
             foreach (RealEstateSet realEstateSet in Program.RPE.RealEstateSet)
             {
-                string[] item = { realEstateSet.id.ToString() + ".", realEstateSet.Address_City + ",", realEstateSet.Address_Street + ",", "д. " + realEstateSet.Address_House + ",", "кв. " + realEstateSet.Address_Numder };
+                string[] item = { realEstateSet.id.ToString() + ". ", realEstateSet.Address_City + ",", realEstateSet.Address_Street + ",", "д. " + realEstateSet.Address_House + ",", "кв. " + realEstateSet.Address_Numder };
                 comboBoxRealEstate.Items.Add(string.Join(" ", item));
             }
         }
@@ -54,9 +54,19 @@ namespace WindowsFormsApp1
 
             foreach (SupplySet supply in Program.RPE.SupplySet)
             {
-                ListViewItem item = new ListViewItem(new string[] { supply.idAgent.ToString(), supply.idClient.ToString(), supply.idRealEstate.ToString(), supply.Price.ToString() });
+                ListViewItem item = new ListViewItem(new string[] {
+                    supply.idAgent.ToString(),
+                    supply.AgentsSet.LastName + " " + supply.AgentsSet.FirstName + " " + supply.AgentsSet.MiddleName,
+                    supply.idClient.ToString(),
+                    supply.ClientsSet.LastName+" "+ supply.ClientsSet.FirstName+" "+supply.ClientsSet.MiddleName,
+                    supply.idRealEstate.ToString(),
+                    "г. "+ supply.RealEstateSet.Address_City+", ул. "+supply.RealEstateSet.Address_Street + ", д. "+ supply.RealEstateSet.Address_House+", кв. "+supply.RealEstateSet.Address_Numder,
+                    supply.Price.ToString()
+
+                });
                 item.Tag = supply;
                 listViewSupplySet.Items.Add(item);
+                listViewSupplySet.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
         }
 
@@ -73,6 +83,7 @@ namespace WindowsFormsApp1
                 supply.Price = Convert.ToInt64(textBoxPrice.Text);
                 Program.RPE.SupplySet.Add(supply);
                 Program.RPE.SaveChanges();
+                ShowSupplySet();
             }
             else MessageBox.Show("Данные не выбраны", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -88,6 +99,7 @@ namespace WindowsFormsApp1
                 supply.idRealEstate = Convert.ToInt32(comboBoxRealEstate.ToString().Split('.')[0]);
                 supply.Price = Convert.ToInt64(textBoxPrice.Text);
                 Program.RPE.SaveChanges();
+                ShowSupplySet();
             }
         }
 

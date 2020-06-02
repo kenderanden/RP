@@ -44,32 +44,34 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxMiddleName
             // 
-            this.textBoxMiddleName.Location = new System.Drawing.Point(12, 64);
+            this.textBoxMiddleName.Location = new System.Drawing.Point(12, 120);
             this.textBoxMiddleName.Name = "textBoxMiddleName";
             this.textBoxMiddleName.Size = new System.Drawing.Size(100, 20);
             this.textBoxMiddleName.TabIndex = 0;
             // 
             // textBoxDealShare
             // 
-            this.textBoxDealShare.Location = new System.Drawing.Point(12, 142);
+            this.textBoxDealShare.Location = new System.Drawing.Point(12, 198);
             this.textBoxDealShare.Name = "textBoxDealShare";
             this.textBoxDealShare.Size = new System.Drawing.Size(100, 20);
             this.textBoxDealShare.TabIndex = 1;
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(12, 103);
+            this.textBoxLastName.Location = new System.Drawing.Point(12, 159);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(100, 20);
             this.textBoxLastName.TabIndex = 2;
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(12, 25);
+            this.textBoxName.Location = new System.Drawing.Point(12, 81);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 20);
             this.textBoxName.TabIndex = 3;
@@ -77,7 +79,7 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(12, 9);
+            this.labelName.Location = new System.Drawing.Point(12, 65);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(29, 13);
             this.labelName.TabIndex = 4;
@@ -86,7 +88,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 48);
+            this.label2.Location = new System.Drawing.Point(12, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 5;
@@ -95,7 +97,7 @@
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(12, 87);
+            this.label.Location = new System.Drawing.Point(12, 143);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(56, 13);
             this.label.TabIndex = 6;
@@ -104,7 +106,7 @@
             // labelDealShare
             // 
             this.labelDealShare.AutoSize = true;
-            this.labelDealShare.Location = new System.Drawing.Point(12, 126);
+            this.labelDealShare.Location = new System.Drawing.Point(12, 182);
             this.labelDealShare.Name = "labelDealShare";
             this.labelDealShare.Size = new System.Drawing.Size(60, 13);
             this.labelDealShare.TabIndex = 7;
@@ -118,7 +120,7 @@
             this.columnHeader3,
             this.columnHeader4});
             this.listView.HideSelection = false;
-            this.listView.Location = new System.Drawing.Point(118, 12);
+            this.listView.Location = new System.Drawing.Point(118, 9);
             this.listView.Name = "listView";
             this.listView.Size = new System.Drawing.Size(506, 296);
             this.listView.TabIndex = 8;
@@ -144,39 +146,57 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(12, 168);
+            this.buttonAdd.BackColor = System.Drawing.Color.YellowGreen;
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdd.Location = new System.Drawing.Point(12, 224);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(100, 23);
             this.buttonAdd.TabIndex = 9;
             this.buttonAdd.Text = "Добавить";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(12, 197);
+            this.buttonEdit.BackColor = System.Drawing.Color.Orange;
+            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEdit.Location = new System.Drawing.Point(12, 253);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(100, 23);
             this.buttonEdit.TabIndex = 10;
             this.buttonEdit.Text = "Изменить";
-            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(12, 226);
+            this.buttonDel.BackColor = System.Drawing.Color.Red;
+            this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDel.Location = new System.Drawing.Point(12, 282);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(100, 23);
             this.buttonDel.TabIndex = 11;
             this.buttonDel.Text = "Удалить";
-            this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.UseVisualStyleBackColor = false;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // Agents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 317);
+            this.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.ClientSize = new System.Drawing.Size(627, 315);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
@@ -191,6 +211,7 @@
             this.Controls.Add(this.textBoxMiddleName);
             this.Name = "Agents";
             this.Text = "Agents";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,5 +235,6 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonDel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
