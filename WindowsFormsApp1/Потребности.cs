@@ -16,14 +16,16 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             ShowClient();
+            comboBoxAgentShow();
+            comboBoxClientShow();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             DemandSet demandSet = new DemandSet();
 
-            demandSet.idAgent = Convert.ToInt32(textBoxidAgent.Text);
-            demandSet.idClient = Convert.ToInt32(textBoxidClient.Text);
+            demandSet.idAgent = Convert.ToInt32(comboBoxAgent.Text);
+            demandSet.idClient = Convert.ToInt32(comboBoxClient.Text); 
             demandSet.Type = textboxType.Text;
             demandSet.MinPrice = Convert.ToInt32(PriceMin.Text);
             demandSet.MaxPrice = Convert.ToInt32(PriceMax.Text);
@@ -74,8 +76,8 @@ namespace WindowsFormsApp1
             {
                 DemandSet demandSet = listView.SelectedItems[0].Tag as DemandSet;
 
-                demandSet.idAgent = Convert.ToInt32(textBoxidAgent.Text);
-                demandSet.idClient = Convert.ToInt32(textBoxidClient.Text);
+                demandSet.idAgent = Convert.ToInt32(comboBoxAgent.Text);
+                demandSet.idClient = Convert.ToInt32(comboBoxClient.Text);
                 demandSet.Type = textboxType.Text;
                 demandSet.MinPrice = Convert.ToInt32(PriceMin.Text);
                 demandSet.MaxPrice = Convert.ToInt32(PriceMax.Text);
@@ -99,8 +101,8 @@ namespace WindowsFormsApp1
             {
                 DemandSet clientsSet = listView.SelectedItems[0].Tag as DemandSet;
 
-                textBoxidAgent.Text = clientsSet.idAgent.ToString();
-                textBoxidClient.Text = clientsSet.idClient.ToString();
+                comboBoxAgent.Text = clientsSet.idAgent.ToString();
+                comboBoxClient.Text = clientsSet.idClient.ToString();
                 textboxType.Text = clientsSet.Type;
                 PriceMin.Text = clientsSet.MinPrice.ToString();
                 PriceMax.Text = clientsSet.MaxPrice.ToString();
@@ -115,8 +117,8 @@ namespace WindowsFormsApp1
             }
             else
             {
-                textBoxidAgent.Text = "";
-                textBoxidClient.Text = "";
+                comboBoxAgent.Text = "";
+                comboBoxClient.Text = "";
                 textboxType.Text = "";
                 PriceMin.Text = "";
                 PriceMax.Text = "";
@@ -149,6 +151,26 @@ namespace WindowsFormsApp1
             catch
             {
                 MessageBox.Show("Невозможно удалить, эта запись используется.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void comboBoxAgentShow()
+        {
+            comboBoxAgent.Items.Clear();
+            foreach (AgentsSet agentsSet in Program.RPE.AgentsSet)
+            {
+                string[] item = { agentsSet.id.ToString() };
+                comboBoxAgent.Items.Add(string.Join(" ", item));
+            }
+        }
+
+        private void comboBoxClientShow()
+        {
+            comboBoxClient.Items.Clear();
+            foreach (ClientsSet clientsSet in Program.RPE.ClientsSet)
+            {
+                string[] item = { clientsSet.id.ToString() };
+                comboBoxClient.Items.Add(string.Join(" ", item));
             }
         }
     }

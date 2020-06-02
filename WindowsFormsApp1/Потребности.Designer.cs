@@ -63,9 +63,9 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
-            this.textBoxidClient = new System.Windows.Forms.TextBox();
-            this.textBoxidAgent = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.comboBoxAgent = new System.Windows.Forms.ComboBox();
+            this.comboBoxClient = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -323,20 +323,6 @@
             this.buttonDel.UseVisualStyleBackColor = false;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
-            // textBoxidClient
-            // 
-            this.textBoxidClient.Location = new System.Drawing.Point(117, 305);
-            this.textBoxidClient.Name = "textBoxidClient";
-            this.textBoxidClient.Size = new System.Drawing.Size(100, 20);
-            this.textBoxidClient.TabIndex = 22;
-            // 
-            // textBoxidAgent
-            // 
-            this.textBoxidAgent.Location = new System.Drawing.Point(11, 305);
-            this.textBoxidAgent.Name = "textBoxidAgent";
-            this.textBoxidAgent.Size = new System.Drawing.Size(100, 20);
-            this.textBoxidAgent.TabIndex = 23;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -346,15 +332,30 @@
             this.label7.TabIndex = 24;
             this.label7.Text = "id Agent Client";
             // 
+            // comboBoxAgent
+            // 
+            this.comboBoxAgent.FormattingEnabled = true;
+            this.comboBoxAgent.Location = new System.Drawing.Point(11, 305);
+            this.comboBoxAgent.Name = "comboBoxAgent";
+            this.comboBoxAgent.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxAgent.TabIndex = 25;
+            // comboBoxClient
+            // 
+            this.comboBoxClient.FormattingEnabled = true;
+            this.comboBoxClient.Location = new System.Drawing.Point(117, 305);
+            this.comboBoxClient.Name = "comboBoxClient";
+            this.comboBoxClient.Size = new System.Drawing.Size(101, 21);
+            this.comboBoxClient.TabIndex = 26;
+            // 
             // Потребности
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(1061, 368);
+            this.Controls.Add(this.comboBoxClient);
+            this.Controls.Add(this.comboBoxAgent);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBoxidAgent);
-            this.Controls.Add(this.textBoxidClient);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
@@ -422,8 +423,8 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonDel;
-        private System.Windows.Forms.TextBox textBoxidClient;
-        private System.Windows.Forms.TextBox textBoxidAgent;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBoxAgent;
+        private System.Windows.Forms.ComboBox comboBoxClient;
     }
 }
