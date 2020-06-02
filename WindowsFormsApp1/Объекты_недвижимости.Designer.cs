@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Риелторы
+    partial class Объекты_недвижимости
     {
         /// <summary>
         /// Required designer variable.
@@ -358,7 +358,7 @@
             this.listViewRealEstateSet_Land.FullRowSelect = true;
             this.listViewRealEstateSet_Land.GridLines = true;
             this.listViewRealEstateSet_Land.HideSelection = false;
-            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(243, 33);
+            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(234, 4);
             this.listViewRealEstateSet_Land.MultiSelect = false;
             this.listViewRealEstateSet_Land.Name = "listViewRealEstateSet_Land";
             this.listViewRealEstateSet_Land.Size = new System.Drawing.Size(840, 450);
@@ -411,7 +411,7 @@
             this.listViewRealEstateSet_House.FullRowSelect = true;
             this.listViewRealEstateSet_House.GridLines = true;
             this.listViewRealEstateSet_House.HideSelection = false;
-            this.listViewRealEstateSet_House.Location = new System.Drawing.Point(299, -5);
+            this.listViewRealEstateSet_House.Location = new System.Drawing.Point(234, 4);
             this.listViewRealEstateSet_House.MultiSelect = false;
             this.listViewRealEstateSet_House.Name = "listViewRealEstateSet_House";
             this.listViewRealEstateSet_House.Size = new System.Drawing.Size(840, 450);
@@ -486,7 +486,7 @@
             this.buttonDel.UseVisualStyleBackColor = false;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
-            // Риелторы
+            // Объекты_недвижимости
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -521,8 +521,8 @@
             this.Controls.Add(this.labelAddress_City);
             this.Controls.Add(this.textBoxAddress_Street);
             this.Controls.Add(this.textBoxAddress_City);
-            this.Name = "Риелторы";
-            this.Text = "Риелторы";
+            this.Name = "Объекты_недвижимости";
+            this.Text = "Объекты недвижимости";
             this.ResumeLayout(false);
             this.PerformLayout();
 

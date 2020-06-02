@@ -25,7 +25,19 @@ namespace WindowsFormsApp1
 
         private void buttonOpenAgents_Click(object sender, EventArgs e)
         {
-            Form formClient = new Риелторы();
+            Form formClient = new Agents();
+            formClient.Show();
+        }
+
+        private void buttonOpenDemands_Click(object sender, EventArgs e)
+        {
+            Form formSupply = new FormSupply();
+            formSupply.Show();
+        }
+
+        private void buttonOpenRealEstate_Click(object sender, EventArgs e)
+        {
+            Form formClient = new Объекты_недвижимости();
             formClient.Show();
         }
     }

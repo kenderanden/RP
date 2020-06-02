@@ -30,7 +30,7 @@
         {
             this.buttonOpenClients = new System.Windows.Forms.Button();
             this.buttonOpenAgents = new System.Windows.Forms.Button();
-            this.buttonOpenRealEstates = new System.Windows.Forms.Button();
+            this.buttonOpenRealEstate = new System.Windows.Forms.Button();
             this.buttonOpenDemands = new System.Windows.Forms.Button();
             this.buttonOpenSupplies = new System.Windows.Forms.Button();
             this.buttonOpenDeals = new System.Windows.Forms.Button();
@@ -64,17 +64,18 @@
             this.buttonOpenAgents.UseVisualStyleBackColor = false;
             this.buttonOpenAgents.Click += new System.EventHandler(this.buttonOpenAgents_Click);
             // 
-            // buttonOpenRealEstates
+            // buttonOpenRealEstate
             // 
-            this.buttonOpenRealEstates.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonOpenRealEstates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOpenRealEstates.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOpenRealEstates.Location = new System.Drawing.Point(4, 308);
-            this.buttonOpenRealEstates.Name = "buttonOpenRealEstates";
-            this.buttonOpenRealEstates.Size = new System.Drawing.Size(271, 49);
-            this.buttonOpenRealEstates.TabIndex = 3;
-            this.buttonOpenRealEstates.Text = "Объекты недвижимости";
-            this.buttonOpenRealEstates.UseVisualStyleBackColor = false;
+            this.buttonOpenRealEstate.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonOpenRealEstate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenRealEstate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonOpenRealEstate.Location = new System.Drawing.Point(4, 308);
+            this.buttonOpenRealEstate.Name = "buttonOpenRealEstate";
+            this.buttonOpenRealEstate.Size = new System.Drawing.Size(271, 49);
+            this.buttonOpenRealEstate.TabIndex = 3;
+            this.buttonOpenRealEstate.Text = "Объекты недвижимости";
+            this.buttonOpenRealEstate.UseVisualStyleBackColor = false;
+            this.buttonOpenRealEstate.Click += new System.EventHandler(this.buttonOpenRealEstate_Click);
             // 
             // buttonOpenDemands
             // 
@@ -87,6 +88,7 @@
             this.buttonOpenDemands.TabIndex = 4;
             this.buttonOpenDemands.Text = "Предложения";
             this.buttonOpenDemands.UseVisualStyleBackColor = false;
+            this.buttonOpenDemands.Click += new System.EventHandler(this.buttonOpenDemands_Click);
             // 
             // buttonOpenSupplies
             // 
@@ -130,7 +132,7 @@
             this.Controls.Add(this.buttonOpenDeals);
             this.Controls.Add(this.buttonOpenSupplies);
             this.Controls.Add(this.buttonOpenDemands);
-            this.Controls.Add(this.buttonOpenRealEstates);
+            this.Controls.Add(this.buttonOpenRealEstate);
             this.Controls.Add(this.buttonOpenAgents);
             this.Controls.Add(this.buttonOpenClients);
             this.Controls.Add(this.pictureBox1);
@@ -148,7 +150,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonOpenClients;
         private System.Windows.Forms.Button buttonOpenAgents;
-        private System.Windows.Forms.Button buttonOpenRealEstates;
+        private System.Windows.Forms.Button buttonOpenRealEstate;
         private System.Windows.Forms.Button buttonOpenDemands;
         private System.Windows.Forms.Button buttonOpenSupplies;
         private System.Windows.Forms.Button buttonOpenDeals;

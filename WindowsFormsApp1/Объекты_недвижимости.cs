@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Риелторы : Form
+    public partial class Объекты_недвижимости : Form
     {
-        public Риелторы()
+        public Объекты_недвижимости()
         {
             InitializeComponent();
             ShowRealEstateSet();
