@@ -18,6 +18,7 @@ namespace WindowsFormsApp1
             ShowAgents();
             ShowClients();
             ShowRealEstate();
+            ShowSupplySet();
         }
 
         void ShowAgents()
@@ -68,7 +69,7 @@ namespace WindowsFormsApp1
 
                 supply.idAgent = Convert.ToInt32(comboBoxAgents.SelectedItem.ToString().Split('.')[0]);
                 supply.idClient = Convert.ToInt32(comboBoxClients.SelectedItem.ToString().Split('.')[0]);
-                supply.idRealEstate = Convert.ToInt32(comboBoxRealEstate.ToString().Split('.'));
+                supply.idRealEstate = Convert.ToInt32(comboBoxRealEstate.SelectedItem.ToString().Split('.')[0]);
                 supply.Price = Convert.ToInt64(textBoxPrice.Text);
                 Program.RPE.SupplySet.Add(supply);
                 Program.RPE.SaveChanges();
@@ -84,7 +85,7 @@ namespace WindowsFormsApp1
 
                 supply.idAgent = Convert.ToInt32(comboBoxAgents.SelectedItem.ToString().Split('.')[0]);
                 supply.idClient = Convert.ToInt32(comboBoxClients.SelectedItem.ToString().Split('.')[0]);
-                supply.idRealEstate = Convert.ToInt32(comboBoxRealEstate.ToString().Split('.'));
+                supply.idRealEstate = Convert.ToInt32(comboBoxRealEstate.ToString().Split('.')[0]);
                 supply.Price = Convert.ToInt64(textBoxPrice.Text);
                 Program.RPE.SaveChanges();
             }
