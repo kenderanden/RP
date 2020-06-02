@@ -117,6 +117,12 @@
     <Compile Include="Объекты_недвижимости.Designer.cs">
       <DependentUpon>Объекты_недвижимости.cs</DependentUpon>
     </Compile>
+    <Compile Include="Потребности.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Потребности.Designer.cs">
+      <DependentUpon>Потребности.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Agents.resx">
       <DependentUpon>Agents.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +147,9 @@
     </Compile>
     <EmbeddedResource Include="Объекты_недвижимости.resx">
       <DependentUpon>Объекты_недвижимости.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Потребности.resx">
+      <DependentUpon>Потребности.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

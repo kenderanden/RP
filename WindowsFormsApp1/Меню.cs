@@ -40,5 +40,11 @@ namespace WindowsFormsApp1
             Form formClient = new Объекты_недвижимости();
             formClient.Show();
         }
+
+        private void buttonOpenSupplies_Click(object sender, EventArgs e)
+        {
+            Form formClient = new Потребности();
+            formClient.Show();
+        }
     }
 }
