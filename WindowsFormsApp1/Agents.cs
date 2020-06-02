@@ -99,5 +99,15 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Невозможно удалить, эта запись используется.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void listView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AgentsSet agentsSet = listView.SelectedItems[0].Tag as AgentsSet;
+
+            textBoxName.Text = agentsSet.FirstName;
+            textBoxMiddleName.Text = agentsSet.MiddleName;
+            textBoxLastName.Text = agentsSet.LastName;
+            textBoxDealShare.Text = agentsSet.DealShare;
+        }
     }
 }

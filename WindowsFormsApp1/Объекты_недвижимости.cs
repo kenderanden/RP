@@ -335,14 +335,20 @@ namespace WindowsFormsApp1
         {
             try
             {
-                if(listViewRealEstateSet_House.SelectedItems.Count == 0 || listViewRealEstateSet_Apartment.SelectedItems.Count == 0|| listViewRealEstateSet_Land.SelectedItems.Count == 0)
+                if (listViewRealEstateSet_Apartment.SelectedItems.Count == 1)
                 {
+                    RealEstateSet realEstate = listViewRealEstateSet_Apartment.SelectedItems[0].Tag as RealEstateSet;
 
+                    Program.RPE.RealEstateSet.Remove(realEstate);
+
+                    Program.RPE.SaveChanges();
+
+                    ShowRealEstateSet();
                 }
             }
             catch
             {
-
+                MessageBox.Show("Невозможно удалить, эта запись используется.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
