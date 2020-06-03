@@ -71,6 +71,7 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(226, 20);
             this.textBoxLogin.TabIndex = 3;
+            this.textBoxLogin.UseSystemPasswordChar = true;
             // 
             // textBoxPass
             // 
@@ -78,6 +79,7 @@
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(226, 20);
             this.textBoxPass.TabIndex = 4;
+            this.textBoxPass.UseSystemPasswordChar = true;
             // 
             // button
             // 
@@ -89,6 +91,7 @@
             this.button.TabIndex = 5;
             this.button.Text = "Вход";
             this.button.UseVisualStyleBackColor = false;
+            this.button.Click += new System.EventHandler(this.button_Click);
             // 
             // FormAuthorization
             // 
@@ -103,6 +106,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormAuthorization";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
