@@ -114,6 +114,7 @@
             this.buttonOpenDeals.TabIndex = 6;
             this.buttonOpenDeals.Text = "Сделки";
             this.buttonOpenDeals.UseVisualStyleBackColor = false;
+            this.buttonOpenDeals.Click += new System.EventHandler(this.buttonOpenDeals_Click);
             // 
             // pictureBox1
             // 

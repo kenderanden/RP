@@ -8,7 +8,7 @@ namespace WindowsFormsApp1
 {
     static class Program
     {
-        public static RPEntities11 RPE = new RPEntities11();
+        public static RPEntities13 RPE = new RPEntities13();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            Application.Run(new FormAuthorization());
         }
     }
 }

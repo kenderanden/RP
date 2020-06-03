@@ -14,6 +14,12 @@ namespace WindowsFormsApp1
     
     public partial class DemandSet
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public DemandSet()
+        {
+            this.DealSet = new HashSet<DealSet>();
+        }
+    
         public int id { get; set; }
         public int idAgent { get; set; }
         public int idClient { get; set; }
@@ -31,5 +37,7 @@ namespace WindowsFormsApp1
     
         public virtual AgentsSet AgentsSet { get; set; }
         public virtual ClientsSet ClientsSet { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DealSet> DealSet { get; set; }
     }
 }

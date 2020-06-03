@@ -24,8 +24,8 @@ namespace WindowsFormsApp1
         {
             DemandSet demandSet = new DemandSet();
 
-            demandSet.idAgent = Convert.ToInt32(comboBoxAgent.Text);
-            demandSet.idClient = Convert.ToInt32(comboBoxClient.Text); 
+            demandSet.idAgent = Convert.ToInt32(comboBoxAgent.Text.Split('.')[0]);
+            demandSet.idClient = Convert.ToInt32(comboBoxClient.Text.Split('.')[0]); 
             demandSet.Type = textboxType.Text;
             demandSet.MinPrice = Convert.ToInt32(PriceMin.Text);
             demandSet.MaxPrice = Convert.ToInt32(PriceMax.Text);
@@ -159,7 +159,7 @@ namespace WindowsFormsApp1
             comboBoxAgent.Items.Clear();
             foreach (AgentsSet agentsSet in Program.RPE.AgentsSet)
             {
-                string[] item = { agentsSet.id.ToString() };
+                string[] item = { agentsSet.id.ToString()+ ". ",agentsSet.FirstName+ " ",  agentsSet.MiddleName + " ", agentsSet.LastName };
                 comboBoxAgent.Items.Add(string.Join(" ", item));
             }
         }
@@ -169,7 +169,7 @@ namespace WindowsFormsApp1
             comboBoxClient.Items.Clear();
             foreach (ClientsSet clientsSet in Program.RPE.ClientsSet)
             {
-                string[] item = { clientsSet.id.ToString() };
+                string[] item = { clientsSet.id.ToString() + ". ", clientsSet.FirstName+" ", clientsSet.MiddleName + " ", clientsSet.LastName };
                 comboBoxClient.Items.Add(string.Join(" ", item));
             }
         }
